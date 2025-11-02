@@ -8,7 +8,7 @@ export default function Api(props){
             localStorage.setItem("l", f.data.ip);console.log(f)
         })
         .catch((er)=>console.log(er));
-        axios.get(`http://ip-api.com/json/${localStorage.getItem("l")}`)
+        axios.get(`https://ip-api.com/json/${localStorage.getItem("l")}`)
         .then((y)=>{console.log(y.data);sres(y.data.city);localStorage.setItem("lat",y.data.lat);localStorage.setItem("lon",y.data.lon)})
         .catch((x)=>console.log(x))
         },[])
